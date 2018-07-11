@@ -8,10 +8,10 @@ import { Tasks } from "components/Tasks/Tasks.jsx";
 import {
   dataPie,
   legendPie,
-  dataSales,
-  optionsSales,
-  responsiveSales,
-  legendSales,
+  dataUsage,
+  optionsUsage,
+  responsiveUsage,
+  legendUsage,
   dataBar,
   optionsBar,
   responsiveBar,
@@ -34,40 +34,31 @@ class Dashboard extends Component {
       <div className="content">
         <Grid fluid>
           <Row>
-            <Col lg={3} sm={6}>
+            <Col lg={4} sm={6}>
               <StatsCard
-                bigIcon={<i className="pe-7s-server text-warning" />}
-                statsText="Capacity"
-                statsValue="105GB"
+                bigIcon={<i className="pe-7s-server text-success" />}
+                statsText="UNIX Services"
+                statsValue="33"
                 statsIcon={<i className="fa fa-refresh" />}
-                statsIconText="Updated now"
-              />
-            </Col>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="pe-7s-wallet text-success" />}
-                statsText="Revenue"
-                statsValue="$1,345"
-                statsIcon={<i className="fa fa-calendar-o" />}
                 statsIconText="Last day"
               />
             </Col>
-            <Col lg={3} sm={6}>
+            <Col lg={4} sm={6}>
               <StatsCard
-                bigIcon={<i className="pe-7s-graph1 text-danger" />}
-                statsText="Errors"
-                statsValue="23"
-                statsIcon={<i className="fa fa-clock-o" />}
-                statsIconText="In the last hour"
+                bigIcon={<i className="pe-7s-server text-warning" />}
+                statsText="WINTEL Services"
+                statsValue="21"
+                statsIcon={<i className="fa fa-refresh" />}
+                statsIconText="Last day"
               />
             </Col>
-            <Col lg={3} sm={6}>
+            <Col lg={4} sm={6}>
               <StatsCard
-                bigIcon={<i className="fa fa-twitter text-info" />}
-                statsText="Followers"
-                statsValue="+45"
+                bigIcon={<i className="pe-7s-server text-warning" />}
+                statsText="AIX Services"
+                statsValue="99"
                 statsIcon={<i className="fa fa-refresh" />}
-                statsIconText="Updated now"
+                statsIconText="Last day"
               />
             </Col>
           </Row>
@@ -78,26 +69,26 @@ class Dashboard extends Component {
                 id="chartHours"
                 title="Users Behavior"
                 category="24 Hours performance"
-                stats="Updated 3 minutes ago"
+                stats="Updated 1 day ago"
                 content={
                   <div className="ct-chart">
                     <ChartistGraph
-                      data={dataSales}
+                      data={dataUsage}
                       type="Line"
-                      options={optionsSales}
-                      responsiveOptions={responsiveSales}
+                      options={optionsUsage}
+                      responsiveOptions={responsiveUsage}
                     />
                   </div>
                 }
                 legend={
-                  <div className="legend">{this.createLegend(legendSales)}</div>
+                  <div className="legend">{this.createLegend(legendUsage)}</div>
                 }
               />
             </Col>
             <Col md={4}>
               <Card
                 statsIcon="fa fa-clock-o"
-                title="Email Statistics"
+                title="Usage Statistics"
                 category="Last Campaign Performance"
                 stats="Campaign sent 2 days ago"
                 content={
@@ -119,7 +110,7 @@ class Dashboard extends Component {
             <Col md={6}>
               <Card
                 id="chartActivity"
-                title="2014 Sales"
+                title="2014 Usage"
                 category="All products including Taxes"
                 stats="Data information certified"
                 statsIcon="fa fa-check"

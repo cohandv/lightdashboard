@@ -478,12 +478,12 @@ var dataPie = {
   series: [40, 20, 40]
 };
 var legendPie = {
-  names: ["Open", "Bounce", "Unsubscribe"],
+  names: ["Unix", "AIX", "Wintel"],
   types: ["info", "danger", "warning"]
 };
 
 // Data for Line Chart
-var dataSales = {
+var dataUsage = {
   labels: [
     "9:00AM",
     "12:00AM",
@@ -500,7 +500,7 @@ var dataSales = {
     [23, 113, 67, 108, 190, 239, 307, 308]
   ]
 };
-var optionsSales = {
+var optionsUsage = {
   low: 0,
   high: 800,
   showArea: false,
@@ -516,7 +516,7 @@ var optionsSales = {
     right: 50
   }
 };
-var responsiveSales = [
+var responsiveUsage = [
   [
     "screen and (max-width: 640px)",
     {
@@ -528,8 +528,8 @@ var responsiveSales = [
     }
   ]
 ];
-var legendSales = {
-  names: ["Open", "Click", "Click Second Time"],
+var legendUsage = {
+  names: ["Unix", "Aix", "Wintel"],
   types: ["info", "danger", "warning"]
 };
 
@@ -586,10 +586,10 @@ module.exports = {
   iconsArray, // For icons (Icons view)
   dataPie,
   legendPie,
-  dataSales,
-  optionsSales,
-  responsiveSales,
-  legendSales,
+  dataUsage,
+  optionsUsage,
+  responsiveUsage,
+  legendUsage,
   dataBar,
   optionsBar,
   responsiveBar,

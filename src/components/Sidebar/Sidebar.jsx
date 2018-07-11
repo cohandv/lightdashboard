@@ -46,11 +46,8 @@ class Sidebar extends Component {
               <img src={logo} alt="logo_image" />
             </div>
           </a>
-          <a
-            href="https://www.creative-tim.com"
-            className="simple-text logo-normal"
-          >
-            Creative Tim
+          <a className="simple-text logo-normal" >
+            SCS - SRE
           </a>
         </div>
         <div className="sidebar-wrapper">
