@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ChartistGraph from "react-chartist";
-import { Grid, Row, Col } from "react-bootstrap";
+import { Grid, Row, Col, Table } from "react-bootstrap";
 
 import { Card } from "components/Card/Card.jsx";
 import { StatsCard } from "components/StatsCard/StatsCard.jsx";
@@ -15,7 +15,9 @@ import {
   dataBar,
   optionsBar,
   responsiveBar,
-  legendBar
+  legendBar,
+  thArray,
+  tdArray
 } from "variables/Variables.jsx";
 
 class Dashboard extends Component {
@@ -107,44 +109,43 @@ class Dashboard extends Component {
           </Row>
 
           <Row>
-            <Col md={6}>
-              <Card
-                id="chartActivity"
-                title="2014 Usage"
-                category="All products including Taxes"
-                stats="Data information certified"
-                statsIcon="fa fa-check"
-                content={
-                  <div className="ct-chart">
-                    <ChartistGraph
-                      data={dataBar}
-                      type="Bar"
-                      options={optionsBar}
-                      responsiveOptions={responsiveBar}
-                    />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendBar)}</div>
-                }
-              />
-            </Col>
+          <div className="content">
+            <Grid fluid>
+              <Row>
+                <Col md={12}>
+                  <Card
+                    title="List of Available Services"
+                    category="Click on search icon to filter them"
+                    ctTableFullWidth
+                    ctTableResponsive
+                    content={
+                      <Table striped hover>
+                        <thead>
+                          <tr>
+                            {thArray.map((prop, key) => {
+                              return <th key={key}>{prop}</th>;
+                            })}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {tdArray.map((prop, key) => {
+                            return (
+                              <tr key={key}>
+                                {prop.map((prop, key) => {
+                                  return <td key={key}>{prop}</td>;
+                                })}
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </Table>
+                    }
+                  />
+                </Col>
 
-            <Col md={6}>
-              <Card
-                title="Tasks"
-                category="Backend development"
-                stats="Updated 3 minutes ago"
-                statsIcon="fa fa-history"
-                content={
-                  <div className="table-full-width">
-                    <table className="table">
-                      <Tasks />
-                    </table>
-                  </div>
-                }
-              />
-            </Col>
+              </Row>
+            </Grid>
+          </div>
           </Row>
         </Grid>
       </div>

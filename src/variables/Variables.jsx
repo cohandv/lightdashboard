@@ -247,14 +247,13 @@ var style = {
 // // // For tables
 // //
 //
-const thArray = ["ID", "Name", "Salary", "Country", "City"];
+const thArray = ["ID", "Name", "OS", "AAAS", "Support group"];
 const tdArray = [
-  ["1", "Dakota Rice", "$36,738", "Niger", "Oud-Turnhout"],
-  ["2", "Minerva Hooper", "$23,789", "Curaçao", "Sinaai-Waas"],
-  ["3", "Sage Rodriguez", "$56,142", "Netherlands", "Baileux"],
-  ["4", "Philip Chaney", "$38,735", "Korea, South", "Overland Park"],
-  ["5", "Doris Greene", "$63,542", "Malawi", "Feldkirchen in Kärnten"],
-  ["6", "Mason Porter", "$78,615", "Chile", "Gloucester"]
+  ["1", "Create home directory", "UNIX", "http://go/chm", "L2"],
+  ["2", "Mount Filesystem", "UNIX", "http://go/chm", "BAC"],
+  ["3", "Citrix License Repair", "WINTEL", "http://go/wintel", "BAC/L2"],
+  ["4", "Audit Report", "UNIX", "http://go/auditunix", "N/A"],
+  ["5", "Blackout window", "UNIX", "http://go/bwu", "BAC"]
 ];
 
 //
